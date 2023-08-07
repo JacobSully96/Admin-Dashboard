@@ -1,13 +1,21 @@
-
+body, html{
+    height: 100%;
+    margin: 0;
+}
 
 .container{
     display: grid;
     grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 6fr;
+    height: 100%;
 }
 
 .header{
     grid-column: 2 / 4;
     background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr;
 }
 
 .sidebar{
@@ -18,13 +26,39 @@
 .article{
     grid-column: 2 / 4;
     background-color: azure;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
+/* Grid Elements for the ENTIRE container */
 .header, .sidebar, .article{
     border: 1px solid black;
 }
 
-.welcome-msg .photo, .top-sec-header .photo {
+/* elements within the HEADER */
+.search-container, .profile, .welcome-msg, .header-btn-container{
+    border: 1px solid red;
+}
+
+
+/* Grid Elements within ARTICLE/MAINCONTENT */
+.projects, .announcements, .trending{
+    border: 1px solid blue;
+}
+
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(2, 450px);
+    grid-template-rows: repeat(3, 200px);
+    gap: 10px;
+}
+
+.projects .card{
+    background-color: yellow;
+}
+
+
+.welcome-msg .photo, .profile .photo, .trend-pic {
   background-color: green;
   color: black;
   height: 50px;
@@ -43,3 +77,9 @@
     font-weight: normal;
     border-radius: 30px; 
 }
+
+
+/* .trending{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+} */

@@ -1,0 +1,45 @@
+
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+
+.header{
+    grid-column: 2 / 4;
+    background-color: antiquewhite;
+}
+
+.sidebar{
+    grid-row: 1 / 4;
+    background-color: aquamarine;
+}
+
+.article{
+    grid-column: 2 / 4;
+    background-color: azure;
+}
+
+.header, .sidebar, .article{
+    border: 1px solid black;
+}
+
+.welcome-msg .photo, .top-sec-header .photo {
+  background-color: green;
+  color: black;
+  height: 50px;
+  width: 50px;
+  font-size: 12px;
+  font-weight: normal;
+  border-radius: 30px;
+}
+
+.logo{
+    background-color: rgb(148, 216, 243);
+    color: black;
+    height: 50px;
+    width: 200px;
+    font-size: 12px;
+    font-weight: normal;
+    border-radius: 30px; 
+}

@@ -3,6 +3,15 @@ body, html{
     margin: 0;
 }
 
+@font-face {
+    font-family: "Roboto";
+    src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+}
+
+.container *{
+    font-family: "Roboto", serif;
+}
+
 .container{
     display: grid;
     grid-template-columns: 1fr 6fr;
@@ -20,7 +29,6 @@ body, html{
 
 .sidebar{
     grid-row: 1 / 4;
-    background-color: aquamarine;
 }
 
 .article{
@@ -46,6 +54,7 @@ body, html{
     border: 1px solid blue;
 }
 
+/* 3 X 2 grid for project Cards */
 .project-container{
     display: grid;
     grid-template-columns: repeat(2, 450px);
@@ -53,11 +62,12 @@ body, html{
     gap: 10px;
 }
 
+
 .projects .card{
     background-color: yellow;
 }
 
-
+/* Placeholder CSS !!!!!!!!!!!!!!!!!!!!! */
 .welcome-msg .photo, .profile .photo, .trend-pic {
   background-color: green;
   color: black;
@@ -68,18 +78,64 @@ body, html{
   border-radius: 30px;
 }
 
-.logo{
-    background-color: rgb(148, 216, 243);
-    color: black;
-    height: 50px;
-    width: 200px;
-    font-size: 12px;
-    font-weight: normal;
-    border-radius: 30px; 
-}
+
 
 
 /* .trending{
     display: grid;
     grid-template-columns: 1fr 3fr;
 } */
+
+
+/* Sidebar section css */
+
+.sidebar{
+    background: #9ceaef;
+}
+
+/* Logo */
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.logo-icon svg{
+    height: 60px;
+    width: 60px;
+}
+
+.logo-text{
+    font-family: "roboto", serif;
+    font-size: 24px;
+}
+
+/* Primary Links / Secondary Links */
+
+.primary-links ul, .secondary-links ul{
+    list-style: none;
+    display: grid;
+    gap: 15px;
+    padding: 10px 30px;
+}
+
+.primary-links li, .secondary-links li{
+    font-size: 20px;
+}
+
+.primary-links li, .secondary-links li {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.primary-links svg, .secondary-links svg {
+    padding-right: 10px;
+}
+
+/* Adjust size of icons to match Primary links icon (Reason: Different source of SVG images) */
+.secondary-links svg{
+    height: 24px;
+    width: 24px;
+}

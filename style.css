@@ -14,14 +14,14 @@ body, html{
 
 .container{
     display: grid;
-    grid-template-columns: 1fr 6fr;
-    grid-template-rows: 1fr 6fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
     height: 100%;
 }
 
 .header{
     grid-column: 2 / 4;
-    background-color: antiquewhite;
+    background-color: white;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100px 1fr;
@@ -40,12 +40,12 @@ body, html{
 
 /* Grid Elements for the ENTIRE container */
 .header, .sidebar, .article{
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 /* elements within the HEADER */
 .search-container, .profile, .welcome-msg, .header-btn-container{
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 
@@ -87,7 +87,7 @@ body, html{
 } */
 
 
-/* Sidebar section css */
+/*---------- Sidebar section css -------------------*/
 
 .sidebar{
     background: #9ceaef;
@@ -111,7 +111,7 @@ body, html{
     font-size: 24px;
 }
 
-/* Primary Links / Secondary Links */
+/* ------------Primary Links / Secondary Links-------------- */
 
 .primary-links ul, .secondary-links ul{
     list-style: none;
@@ -138,4 +138,108 @@ body, html{
 .secondary-links svg{
     height: 24px;
     width: 24px;
+}
+
+
+
+/* ----HEADER....SEARCH--------- */
+
+.search-container{
+    display: flex;
+    align-items: center;
+    grid-column: 2fr;
+    padding-left: 35px;
+}
+
+.search-container svg{
+    height: 30px;
+    width: 30px;
+}
+
+#search-bar{
+    width: 700px;
+    height: 30px;
+    border-radius: 20px;
+    border: 0;
+    background-color: rgb(240, 243, 243);
+}
+
+/* ----HEADER....Profile--------- */
+
+/* .profile{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+} */
+
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.profile .bell-icon{
+    padding-right: 30px;
+}
+
+.bell-icon{
+    height: 30px;
+    width: 30px;
+}
+
+.profile #profile{
+    height: 50px;
+    width: 50px;
+}
+
+/* ----HEADER---Welcome message */
+
+
+.welcome-msg{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 30px;
+}
+
+.welcome-msg #profile{
+    height: 80px;
+    width: 80px;
+}
+
+.welcome-text h2{
+    margin-top: 0;
+}
+
+.welcome-text p{
+    margin-bottom: 0;
+}
+
+/* ---HEADER---Buttons--- */
+
+.header-btn-container{
+    display: grid;
+    align-items: center;
+    justify-self: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.header-btn-container button{
+    height: 40px;
+    width: 130px;
+    border-radius: 25px;
+    border: 0;
+    background-color: #9ceaef;
+}
+
+
+
+/* ---ARTICLE */
+
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
 }

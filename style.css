@@ -51,7 +51,7 @@ body, html{
 
 /* Grid Elements within ARTICLE/MAINCONTENT */
 .projects, .announcements, .trending{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 /* 3 X 2 grid for project Cards */
@@ -252,6 +252,7 @@ body, html{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 250px);
     padding: 10px;
+    gap: 20px;
 
 }
 
@@ -294,7 +295,7 @@ body, html{
     padding: 0 20px;
 }
 
-/* Announcement / Trending */
+/* --------ANNOUNCEMENT-------   */
 
 .announcements h3{
     padding-left: 20px;
@@ -318,16 +319,38 @@ body, html{
 }
 
 
+/* --------TRENDING--------- */  
 
-/* TRENDING */  
-
+.trending h3{
+    padding-left: 20px;
+    padding-top: 45px;
+}
 
 .trend-container{
     display: grid;
     background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
 }
 
 .trend{
-    border: 1px solid black;
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.trend-pic img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.trend .text-block{
+    padding-left: 20px;
+}
+
+.trend .trend-text{
+    color: gray;
 }
 
